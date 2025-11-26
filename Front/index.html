@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astro Motors | Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/accesibilidad.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="header-inner container">
+
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/logo-astro-motors.png" alt="Astro Motors">
+      </a>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+
+        <li class="has-submenu">
+          <a href="productos.html">Productos</a>
+          <ul class="submenu">
+            <li><a href="productos-clasicos.html">Clásicos</a></li>
+            <li><a href="productos-deportivos.html">Deportivos</a></li>
+            <li><a href="productos-lujosos.html">Lujosos</a></li>
+          </ul>
+        </li>
+
+        <li><a href="ofertas.html">Ofertas</a></li>
+        <li><a href="mision-vision.html">Misión y Visión</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Iconos derecha -->
+    <div class="header-icons">
+      <span id="user-name" class="header-user-name"></span>
+
+      <a href="carrito.html" id="cart-link" class="icon-btn icon-cart" aria-label="Carrito" style="display:none;">
+        🛒 <span id="cart-count" class="cart-count-badge">0</span>
+      </a>
+
+      <a href="admin.html" id="admin-link" class="icon-btn" style="display:none;" aria-label="Panel administrador">
+        ⚙️
+      </a>
+
+      <a href="login.html" id="login-link" class="icon-btn icon-account" aria-label="Cuenta">
+        👤
+      </a>
+
+      <button id="logout-btn" class="icon-btn" style="display:none;" aria-label="Cerrar sesión">
+        Salir
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<button
+  class="accessibility-btn"
+  id="accessibility-btn"
+  aria-label="Opciones de accesibilidad"
+  type="button">
+  ♿
+</button>
+
+<div class="accessibility-panel" id="accessibility-panel" aria-hidden="true">
+  <h3>Accesibilidad</h3>
+
+  <p class="accessibility-section-title">Modo de color</p>
+  <div class="accessibility-buttons-row">
+    <button class="accessibility-chip" data-theme="dark" type="button">Oscuro</button>
+    <button class="accessibility-chip" data-theme="light" type="button">Claro</button>
+  </div>
+
+  <p class="accessibility-section-title">Tamaño de texto</p>
+  <div class="accessibility-buttons-row">
+    <button class="accessibility-chip" data-font="small" type="button">A-</button>
+    <button class="accessibility-chip" data-font="normal" type="button">A</button>
+    <button class="accessibility-chip" data-font="large" type="button">A+</button>
+    <button class="accessibility-chip" data-font="xlarge" type="button">A++</button>
+  </div>
+</div>
+
+<!-- HERO con imagen de autos -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="img/hero-autos.png" alt="Autos de Astro Motors">
+    <div class="hero-gradient"></div>
+  </div>
+
+  <div class="hero-content container">
+    <h1>ASTRO MOTORS</h1>
+    <p>Ponle primera a tu felicidad</p>
+  </div>
+</section>
+
+<main>
+  <!-- SECCIÓN QUIÉNES SOMOS -->
+  <section class="section about-section">
+    <div class="container">
+      <h2>¿Quiénes somos?</h2>
+
+      <p>
+        En <strong>Astro Motors</strong> creemos que un auto no es solo un medio de transporte,
+        sino una extensión de tu estilo, tu pasión y tu personalidad. Por eso nos
+        dedicamos a ofrecer vehículos que destacan en cada detalle: lujosos,
+        deportivos y clásicos.
+      </p>
+
+      <p>
+        Nuestro proyecto nace como una tienda en línea académica, pero con una
+        experiencia visual y funcional inspirada en concesionarias profesionales:
+        catálogo completo, carrito de compra, panel de administración y reportes
+        de ventas.
+      </p>
+
+      <p>
+        Más que mostrar autos, mostramos experiencias sobre ruedas.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN POR QUÉ ASTRO MOTORS -->
+  <section class="section values-section">
+    <div class="container">
+      <h2>¿Por qué elegir Astro Motors?</h2>
+
+      <div class="values-grid">
+        <article class="value-card">
+          <h3>Catálogo curado</h3>
+          <p>
+            Autos clásicos, deportivos y de lujo seleccionados uno a uno
+            para representar diferentes estilos de vida y personalidades.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3>Experiencia completa</h3>
+          <p>
+            Simulamos todo el flujo de una tienda real: registro de usuarios,
+            carrito, órdenes, estadísticas y panel administrador.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3>Diseño enfocado al detalle</h3>
+          <p>
+            Interfaz oscura, moderna y pensada para resaltar las líneas y
+            colores de cada vehículo.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3>Proyecto académico profesional</h3>
+          <p>
+            Desarrollado con buenas prácticas en frontend, backend y base
+            de datos, ideal para demostrar habilidades técnicas reales.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CATEGORÍAS DESTACADAS -->
+  <section class="section categories-section">
+    <div class="container">
+      <h2>Encuentra tu tipo de auto</h2>
+
+      <div class="categories-grid">
+        <article class="category-card">
+          <h3>Clásicos</h3>
+          <p>
+            Modelos que marcaron época. Ideal para quienes aman la historia
+            del motor y el estilo vintage.
+          </p>
+          <a href="productos-clasicos.html" class="category-btn">Ver clásicos</a>
+        </article>
+
+        <article class="category-card">
+          <h3>Deportivos</h3>
+          <p>
+            Potencia, velocidad y líneas agresivas. Para los que disfrutan
+            sentir la adrenalina en cada curva.
+          </p>
+          <a href="productos-deportivos.html" class="category-btn">Ver deportivos</a>
+        </article>
+
+        <article class="category-card">
+          <h3>Lujosos</h3>
+          <p>
+            Confort, tecnología y detalles premium. Perfectos para quienes
+            buscan elegancia y presencia en la carretera.
+          </p>
+          <a href="productos-lujosos.html" class="category-btn">Ver lujosos</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN EXPERIENCIA DE COMPRA -->
+  <section class="section steps-section">
+    <div class="container">
+      <h2>¿Cómo funciona nuestra tienda?</h2>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">1</span>
+          <h3>Explora el catálogo</h3>
+          <p>
+            Recorre las categorías de autos, revisa características y
+            agrega tus modelos favoritos al carrito.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">2</span>
+          <h3>Simula tu compra</h3>
+          <p>
+            Calcula impuestos, gastos de envío y aplica cupones como
+            <strong>ASTRO10</strong> para ver descuentos.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">3</span>
+          <h3>Finaliza y recibe tu nota</h3>
+          <p>
+            Completa el proceso de checkout y el sistema genera una
+            nota de compra en PDF que llega a tu correo.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DATOS DEL PROYECTO -->
+  <section class="section project-section">
+    <div class="container project-grid">
+      <div>
+        <h2>Un proyecto hecho por estudiantes</h2>
+        <p>
+          Astro Motors fue desarrollado como parte de un proyecto académico de
+          Ingeniería en Sistemas Computacionales, integrando diferentes áreas:
+        </p>
+        <ul class="project-list">
+          <li>Diseño de interfaz y experiencia de usuario.</li>
+          <li>Desarrollo de API REST con Node.js y Express.</li>
+          <li>Manejo de base de datos MySQL para usuarios, productos y órdenes.</li>
+          <li>Autenticación, roles y panel de administración.</li>
+          <li>Generación de correos y notas de compra en PDF.</li>
+        </ul>
+      </div>
+
+      <div class="project-highlight">
+        <h3>Tecnologías utilizadas</h3>
+        <p>Este proyecto combina varias herramientas modernas:</p>
+        <ul>
+          <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, SweetAlert2.</li>
+          <li><strong>Backend:</strong> Node.js, Express, JWT.</li>
+          <li><strong>Base de datos:</strong> MySQL.</li>
+          <li><strong>Extras:</strong> Chart.js para estadísticas, PDFKit para notas de compra.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Astro Motors. Proyecto académico – Ingeniería en Sistemas Computacionales.</p>
+      <p><a href="#">Términos y políticas</a></p>
+
+      <!-- APORTACIÓN EXTRA: Botón para música de fondo -->
+      <div class="footer-music">
+        <span>Música de fondo:</span>
+        <button id="music-toggle" class="footer-music-btn" type="button">
+          ▶ Reproducir
+        </button>
+
+        <!-- archivo de música (pon un mp3 tuyo en /audio) -->
+        <audio id="bg-music" src="audio/astro-theme.mp3" loop></audio>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="funciones/api.js"></script>
+  <script src="funciones/auth.js"></script>
+  <script src="funciones/accesibilidad.js"></script>
+
+</body>
+</html>

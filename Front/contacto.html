@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astro Motors | Contacto</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="stylesheet" href="css/accesibilidad.css">
+</head>
+<body>
+
+  <!-- HEADER ACTUALIZADO -->
+  <header class="main-header">
+    <div class="header-inner container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo-astro-motors.png" alt="Astro Motors">
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+
+          <li class="has-submenu">
+            <a href="productos.html">Productos</a>
+            <ul class="submenu">
+              <li><a href="productos-clasicos.html">Clásicos</a></li>
+              <li><a href="productos-deportivos.html">Deportivos</a></li>
+              <li><a href="productos-lujosos.html">Lujosos</a></li>
+            </ul>
+          </li>
+
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="mision-vision.html">Misión y Visión</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons">
+        <span id="user-name" class="header-user-name"></span>
+
+        <a href="carrito.html" id="cart-link" class="icon-btn icon-cart" aria-label="Carrito" style="display:none;">
+          🛒 <span id="cart-count" class="cart-count-badge">0</span>
+        </a>
+
+        <a href="admin.html" id="admin-link" class="icon-btn" style="display:none;" aria-label="Panel administrador">
+          ⚙️
+        </a>
+
+        <a href="login.html" id="login-link" class="icon-btn icon-account" aria-label="Cuenta">
+          👤
+        </a>
+
+        <button id="logout-btn" class="icon-btn" style="display:none;" aria-label="Cerrar sesión">
+          Salir
+        </button>
+      </div>
+    </div>
+  </header>
+<button
+  class="accessibility-btn"
+  id="accessibility-btn"
+  aria-label="Opciones de accesibilidad"
+  type="button">
+  ♿
+</button>
+
+<div class="accessibility-panel" id="accessibility-panel" aria-hidden="true">
+  <h3>Accesibilidad</h3>
+
+  <p class="accessibility-section-title">Modo de color</p>
+  <div class="accessibility-buttons-row">
+    <button class="accessibility-chip" data-theme="dark" type="button">Oscuro</button>
+    <button class="accessibility-chip" data-theme="light" type="button">Claro</button>
+  </div>
+
+  <p class="accessibility-section-title">Tamaño de texto</p>
+  <div class="accessibility-buttons-row">
+    <button class="accessibility-chip" data-font="small" type="button">A-</button>
+    <button class="accessibility-chip" data-font="normal" type="button">A</button>
+    <button class="accessibility-chip" data-font="large" type="button">A+</button>
+    <button class="accessibility-chip" data-font="xlarge" type="button">A++</button>
+  </div>
+</div>
+  <main class="contact-page">
+
+    <!-- TÍTULO -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">NOSOTROS, PREGUNTAS FRECUENTES Y CONTACTO</h1>
+        <p class="page-subtitle">
+          Conoce al equipo detrás de Astro Motors, resuelve tus dudas y ponte en contacto con nosotros.
+        </p>
+      </div>
+    </section>
+
+    <!-- NOSOTROS / EQUIPO -->
+    <section class="section about-section">
+      <div class="container">
+        <h2 class="section-title">Nuestro equipo</h2>
+        <p class="section-intro">
+          Astro Motors es un proyecto académico desarrollado por estudiantes de Ingeniería en Sistemas Computacionales.
+          Combinamos backend, frontend y diseño para crear una experiencia de compra completa.
+        </p>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <h3>Luis Ángel Barragán González</h3>
+            <p class="team-role">Líder de proyecto · Backend & Frontend</p>
+            <p class="team-desc">
+              Coordinación general del proyecto, diseño de la arquitectura, lógica de negocio y conexión con base de datos.
+            </p>
+          </article>
+
+          <article class="team-card">
+            <h3>Obed Josué Huerta Soledad</h3>
+            <p class="team-role">Desarrollador Backend</p>
+            <p class="team-desc">
+              Endpoints de la API, manejo de órdenes, seguridad básica y comunicación con MySQL.
+            </p>
+          </article>
+
+          <article class="team-card">
+            <h3>Carlos Alejandro Ramírez Prieto</h3>
+            <p class="team-role">Desarrollador Frontend & UI</p>
+            <p class="team-desc">
+              Maquetación de pantallas, estilos responsivos, panel de administrador y experiencia de usuario.
+            </p>
+          </article>
+
+          <article class="team-card">
+            <h3>Ángel Daniel García de Lara</h3>
+            <p class="team-role">QA · Base de datos</p>
+            <p class="team-desc">
+              Diseño de tablas, pruebas de integración, validación de flujos de compra y control de calidad.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN / MAPA -->
+    <section class="section location-section">
+      <div class="container location-grid">
+        <div>
+          <h2 class="section-title">¿Dónde nos encontramos?</h2>
+          <p class="section-intro">
+            Nuestro proyecto se desarrolla en una institución educativa de nivel superior en México.
+            A continuación te mostramos una ubicación de referencia en Google Maps.
+          </p>
+          <ul class="location-details">
+            <li><strong>Proyecto:</strong> Astro Motors – Tienda en línea de autos</li>
+            <li><strong>Ciudad:</strong> Aguascalientes, México (Universidad Autónoma de Aguascalientes)</li>
+            <li><strong>Horario de atención (en línea):</strong> Lunes a Viernes · 9:00 a 18:00</li>
+          </ul>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.7084836373637!2d-102.3197342!3d21.9097842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429eee3f80f1e9f%3A0x723460af84436936!2sUAA!5e0!3m2!1ses-ES!2smx!4v1700000000000"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- REDES SOCIALES -->
+    <section class="section social-section">
+      <div class="container">
+        <h2 class="section-title">Síguenos en redes</h2>
+        <p class="section-intro">
+          Mantente al tanto de nuevas ofertas, modelos y noticias sobre el proyecto.
+        </p>
+
+        <div class="social-links">
+          <!-- Instagram bloqueado (no navega a ningún lado) -->
+          <a href="javascript:void(0)" class="social-pill">📸 Instagram · @astromotors</a>
+
+          <!-- Facebook con el link real -->
+          <a href="https://www.facebook.com/profile.php?id=61559521962446"
+             class="social-pill"
+             target="_blank"
+             rel="noopener noreferrer">
+            📘 Facebook · Astro Motors
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="section faq-section">
+      <div class="container">
+        <h2 class="section-title">Preguntas frecuentes</h2>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Los autos que aparecen en la tienda son reales o sólo demostración?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Los autos mostrados forman parte de un proyecto académico. La tienda está diseñada con fines educativos,
+                por lo que las ventas no son reales, pero todos los procesos (carrito, órdenes, panel admin, etc.)
+                simulan una tienda profesional.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Qué tecnologías utilizamos en el proyecto?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Usamos HTML, CSS y JavaScript en el frontend; Node.js, Express y MySQL en el backend; además de librerías
+                como SweetAlert2 y Chart.js para notificaciones y estadísticas.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Cómo manejan la información de los usuarios?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Los datos se guardan en una base de datos MySQL con usuarios, pedidos y productos. El manejo es con fines
+                académicos, pero se siguen buenas prácticas de validación y control de acceso para administradores y clientes.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Puedo ver un resumen de mis pedidos en el sistema?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Sí. Como cliente puedes consultar tu carrito y simular compras; como administrador puedes revisar
+                estadísticas de ventas, órdenes registradas y productos vendidos desde el panel administrador.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="section contact-section">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Formulario de contacto</h2>
+          <p class="section-intro">
+            Si tienes dudas sobre el proyecto, sugerencias o comentarios, escríbenos y nos pondremos en contacto contigo.
+          </p>
+
+          <form id="contact-form" class="contact-form">
+            <div class="form-field">
+              <label for="contact-name">Nombre completo</label>
+              <input type="text" id="contact-name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">Correo electrónico</label>
+              <input type="email" id="contact-email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-subject">Asunto</label>
+              <input type="text" id="contact-subject" required>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Mensaje</label>
+              <textarea id="contact-message" rows="4" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit">Enviar mensaje</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Astro Motors. Proyecto académico – Ingeniería en Sistemas Computacionales.</p>
+      <p><a href="#">Términos y políticas</a></p>
+
+      <!-- APORTACIÓN EXTRA: Botón para música de fondo -->
+      <div class="footer-music">
+        <span>Música de fondo:</span>
+        <button id="music-toggle" class="footer-music-btn" type="button">
+          ▶ Reproducir
+        </button>
+
+        <!-- archivo de música (pon un mp3 tuyo en /audio) -->
+        <audio id="bg-music" src="audio/astro-theme.mp3" loop></audio>
+      </div>
+    </div>
+  </footer>
+
+  <script src="funciones/accesibilidad.js"></script>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="funciones/api.js"></script>
+  <script src="funciones/auth.js"></script>
+  <script src="funciones/contacto.js"></script>
+</body>
+</html>

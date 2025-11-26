@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astro Motors | Detalle del vehículo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/producto-detalle.css">
+  <link rel="stylesheet" href="css/accesibilidad.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="header-inner container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/logo-astro-motors.png" alt="Astro Motors">
+      </a>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+
+        <li class="has-submenu">
+          <a href="productos.html">Productos</a>
+          <ul class="submenu">
+            <li><a href="productos-clasicos.html">Clásicos</a></li>
+            <li><a href="productos-deportivos.html">Deportivos</a></li>
+            <li><a href="productos-lujosos.html">Lujosos</a></li>
+          </ul>
+        </li>
+
+        <li><a href="ofertas.html">Ofertas</a></li>
+        <li><a href="mision-vision.html">Misión y Visión</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Iconos derecha -->
+    <div class="header-icons">
+      <span id="user-name" class="header-user-name"></span>
+
+      <a href="carrito.html" id="cart-link" class="icon-btn icon-cart" aria-label="Carrito" style="display:none;">
+        🛒 <span id="cart-count" class="cart-count-badge">0</span>
+      </a>
+
+      <a href="admin.html" id="admin-link" class="icon-btn" style="display:none;" aria-label="Panel administrador">
+        ⚙️
+      </a>
+
+      <a href="login.html" id="login-link" class="icon-btn icon-account" aria-label="Cuenta">
+        👤
+      </a>
+
+      <button id="logout-btn" class="icon-btn" style="display:none;" aria-label="Cerrar sesión">
+        Salir
+      </button>
+    </div>
+  </div>
+</header>
+<button
+  class="accessibility-btn"
+  id="accessibility-btn"
+  aria-label="Opciones de accesibilidad"
+  type="button">
+  ♿
+</button>
+
+<div class="accessibility-panel" id="accessibility-panel" aria-hidden="true">
+  <h3>Accesibilidad</h3>
+
+  <p class="accessibility-section-title">Modo de color</p>
+  <div class="accessibility-buttons-row">
+    <button class="accessibility-chip" data-theme="dark" type="button">Oscuro</button>
+    <button class="accessibility-chip" data-theme="light" type="button">Claro</button>
+  </div>
+
+  <p class="accessibility-section-title">Tamaño de texto</p>
+  <div class="accessibility-buttons-row">
+    <button class="accessibility-chip" data-font="small" type="button">A-</button>
+    <button class="accessibility-chip" data-font="normal" type="button">A</button>
+    <button class="accessibility-chip" data-font="large" type="button">A+</button>
+    <button class="accessibility-chip" data-font="xlarge" type="button">A++</button>
+  </div>
+</div>
+  <main class="products-page">
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">DETALLE DEL VEHÍCULO</h1>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <div class="container">
+        <div id="product-detail"></div>
+      </div>
+    </section>
+  </main>
+
+    <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Astro Motors. Proyecto académico – Ingeniería en Sistemas Computacionales.</p>
+      <p><a href="#">Términos y políticas</a></p>
+
+      <!-- APORTACIÓN EXTRA: Botón para música de fondo -->
+      <div class="footer-music">
+        <span>Música de fondo:</span>
+        <button id="music-toggle" class="footer-music-btn" type="button">
+          ▶ Reproducir
+        </button>
+
+        <!-- archivo de música (pon un mp3 tuyo en /audio) -->
+        <audio id="bg-music" src="audio/astro-theme.mp3" loop></audio>
+      </div>
+    </div>
+  </footer>
+
+    <script src="funciones/accesibilidad.js"></script>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="funciones/api.js"></script>
+  <script src="funciones/auth.js"></script>
+  <script src="funciones/producto-detalle.js"></script>
+</body>
+</html>

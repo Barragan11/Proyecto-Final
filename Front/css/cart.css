@@ -1,0 +1,139 @@
+/* === Carrito de compras y tarjetas tipo panel === */
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1.7fr 1.1fr;
+  gap: 1.5rem;
+}
+
+.cart-card {
+  background: #1f1f1f;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #333;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  color: #f5f5f5;
+}
+
+.cart-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 0.6rem 0.4rem;
+  border-bottom: 1px solid #333;
+}
+
+.cart-table th {
+  text-align: left;
+  font-weight: 600;
+  color: #cccccc;
+}
+
+.cart-product {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.cart-product img {
+  width: 70px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.cart-qty-input {
+  width: 70px;
+  padding: 0.3rem 0.4rem;
+  border-radius: 999px;
+  border: 1px solid #555;
+  background: #111;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.cart-qty-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.cart-summary-total {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0.6rem;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.cart-card .form-field input,
+.cart-card .form-field select {
+  background: #111;
+  border-color: #444;
+  color: #f5f5f5;
+}
+
+.cart-card .form-field input:focus,
+.cart-card .form-field select:focus {
+  border-color: var(--accent);
+}
+
+.cart-card .form-actions button {
+  width: 100%;
+}
+
+/* === Carrito vacío === */
+
+.cart-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #1f1f1f;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cart-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cart-empty h2 {
+  margin-bottom: 0.5rem;
+}
+
+.cart-empty p {
+  margin-bottom: 1rem;
+  color: #bbbbbb;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+}
