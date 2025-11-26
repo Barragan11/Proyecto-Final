@@ -1,0 +1,253 @@
+/* === Página Nosotros / FAQ / Contacto === */
+
+.contact-page {
+  background: #111;
+}
+
+/* Secciones generales */
+.section {
+  padding: 2.5rem 0;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-intro {
+  max-width: 680px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ===== Equipo ===== */
+
+.about-section {
+  background: #151515;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.team-card {
+  background: #1c1c1c;
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.team-card h3 {
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  font-size: 0.85rem;
+  color: var(--accent, #ff4444);
+  margin-bottom: 0.5rem;
+}
+
+.team-desc {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* ===== Ubicación / Mapa ===== */
+
+.location-section {
+  background: #101010;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.location-details {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.location-details li {
+  margin-bottom: 0.35rem;
+  color: #ddd;
+}
+
+.map-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  min-height: 260px;
+}
+
+/* ===== Redes sociales ===== */
+
+.social-section {
+  background: #151515;
+  text-align: left;
+}
+
+.social-links {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  background: #222;
+  color: #f5f5f5;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-pill:hover {
+  background: var(--accent, #ff4444);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== FAQ ===== */
+
+.faq-section {
+  background: #101010;
+}
+
+.faq-list {
+  margin-top: 1.4rem;
+  max-width: 760px;
+}
+
+.faq-item {
+  border-radius: 10px;
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 0.7rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: transparent;
+  border: none;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: max-height 0.25s ease, padding-bottom 0.25s ease;
+}
+
+.faq-item.open .faq-answer {
+  padding-bottom: 0.8rem;
+  max-height: 220px;
+}
+
+.faq-answer p {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-top: 0.4rem;
+}
+
+/* ===== Formulario de contacto ===== */
+
+.contact-section {
+  background: #151515;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr);
+}
+
+.contact-form {
+  margin-top: 1.2rem;
+  background: #181818;
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-form .form-field label {
+  color: #f5f5f5;
+}
+
+/* Mejor botón para que resalte */
+.contact-form .form-actions button {
+  width: 100%;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.contact-form .form-actions button:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-wrapper {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 2rem 0;
+  }
+
+  .contact-form {
+    padding: 1.2rem;
+  }
+}

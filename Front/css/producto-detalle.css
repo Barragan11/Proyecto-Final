@@ -1,0 +1,264 @@
+/* === Detalle de producto === */
+
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: flex-start;
+  transition: transform 0.25s ease;
+}
+
+/* Pequeño efecto general */
+@media (hover: hover) {
+  .product-detail-layout:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* ==== Imagen ==== */
+
+.product-detail-image {
+  position: relative;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.product-detail-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transform: scale(1);
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+/* Capa de sombreado */
+.product-detail-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.45) 70%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+/* HOVER BIEN MARCADO (solo dispositivos con mouse) */
+@media (hover: hover) {
+  .product-detail-image:hover img {
+    transform: scale(1.15);
+    filter: saturate(1.18) contrast(1.08) brightness(1.08);
+  }
+
+  .product-detail-image:hover::after {
+    opacity: 1;
+  }
+}
+
+/* ==== Panel de información ==== */
+
+.product-detail-info {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 2.4rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.product-detail-info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+  color: #111;
+}
+
+.product-detail-category {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777;
+}
+
+/* ==== Precio ==== */
+
+.product-detail-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d5c28;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.product-detail-price-old {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+}
+
+/* ==== Disponibilidad ==== */
+
+.product-detail-stock {
+  margin-bottom: 0.6rem;
+}
+
+.badge-availability {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid transparent;
+}
+
+.badge-availability.available {
+  background: #e7f8ee;
+  color: #1a7f2e;
+  border-color: #b6e1c5;
+}
+
+.badge-availability.soldout {
+  background: #ffe6e6;
+  color: #b32626;
+  border-color: #f5b5b5;
+}
+
+/* ==== Descripción ==== */
+
+.product-detail-description {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ==== Botón principal ==== */
+
+.btn-primary-detail {
+  padding: 0.8rem 2.1rem;
+  border-radius: 999px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary-detail:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.32);
+  background: #333;
+}
+
+.btn-primary-detail:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==== Enlace volver ==== */
+
+.product-detail-back {
+  margin-top: 1rem;
+}
+
+.product-detail-back .btn-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.product-detail-back .btn-link:hover {
+  color: #000;
+}
+
+/* ==== Botón Agregar al carrito ─ Diseño Premium ==== */
+
+.btn-add-cart {
+  width: 100%;
+  padding: 0.75rem 1.6rem;
+  border: none;
+  border-radius: 999px;
+  background: #111; /* Negro premium */
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.btn-add-cart:hover:not(:disabled) {
+  background: #000;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.25);
+}
+
+.btn-add-cart:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-add-cart:disabled {
+  background: #777;
+  cursor: not-allowed;
+  opacity: 0.65;
+  box-shadow: none;
+}
+
+.product-detail-info {
+  align-items: flex-start;
+}
+
+.btn-add-cart {
+  margin-top: 0.6rem;
+  width: 100%;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.btn-add-cart:hover:not(:disabled) {
+  background: #333;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.btn-add-cart:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ==== Responsivo ==== */
+
+@media (max-width: 992px) {
+  .product-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail-info {
+    padding: 1.6rem 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-detail-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .product-detail-price {
+    font-size: 1.3rem;
+  }
+}

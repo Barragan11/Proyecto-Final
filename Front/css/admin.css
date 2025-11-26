@@ -1,0 +1,196 @@
+/* === Panel Admin === */
+
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.admin-tab-btn {
+  border-radius: 999px;
+  border: 1px solid #444;
+  background: #1f1f1f;
+  color: #f5f5f5;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.admin-tab-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.admin-section {
+  display: none;
+}
+
+.admin-section.active {
+  display: block;
+}
+
+/* filas de admin productos / pedidos / usuarios */
+
+.admin-product-row,
+.admin-order-row,
+.admin-user-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn-small {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-small.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-small.danger {
+  background: #ff4b4b;
+  color: #fff;
+}
+
+/* Tarjeta de la gráfica más compacta y centrada */
+.chart-card {
+  max-width: 900px;      /* la tarjeta no será tan larga */
+  margin: 0 auto;        /* centrar dentro del contenedor */
+}
+
+/* Texto de total de ventas con un poco de espacio */
+.sales-total-label {
+  margin: 0.4rem 0 0.8rem;
+  font-size: 0.9rem;
+  color: #f5f5f5;
+}
+
+/* Contenedor de la gráfica */
+.admin-chart-container {
+  width: 100%;
+  max-width: 480px;      /* TAMAÑO REAL DEL GRÁFICO */
+  aspect-ratio: 4 / 3;   /* proporción agradable */
+  margin: 0 auto 0.8rem; /* centrado y separación abajo */
+  position: relative;
+}
+
+/* El canvas se adapta al contenedor */
+.admin-chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* Botón de actualizar alineado a la derecha dentro de la tarjeta */
+.chart-card .btn-small.primary {
+  margin-top: 0.2rem;
+}
+.chart-card > div:last-child {
+  text-align: right;
+}
+
+/* Nuevo producto en grid bonito */
+.admin-new-product {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.admin-new-product .form-field-wide {
+  grid-column: 1 / -1; /* ocupa todo el ancho */
+}
+
+.admin-new-product-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+/* Fila de edición de productos */
+.admin-product-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  grid-auto-rows: auto;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-product-row .form-field-wide {
+  grid-column: 1 / -1;
+}
+
+.admin-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: stretch;
+}
+
+/* Botoncitos del admin */
+.btn-small {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btn-small.primary {
+  background: #ff4444;
+  color: #fff;
+}
+
+.btn-small.danger {
+  background: #333;
+  color: #fff;
+}
+
+/* ----- Detalle de autos por pedido ----- */
+
+.admin-order-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.6rem 0;
+}
+
+.admin-order-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.4rem 1rem;
+}
+
+.admin-order-items {
+  font-size: 0.85rem;
+  color: #f5f5f5;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+}
+
+.admin-order-label {
+  font-weight: 600;
+  margin-right: 0.4rem;
+  color: #ffb347; /* un toque de color para el label */
+}
+
+.admin-order-products {
+  opacity: 0.9;
+}
+

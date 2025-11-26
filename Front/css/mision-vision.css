@@ -1,0 +1,108 @@
+/* ====== MISIÓN / VISIÓN ====== */
+
+.mv-page {
+  background: #2b2b2b;
+  color: var(--text-main);
+}
+
+/* encabezado adaptado a fondo oscuro */
+.mv-page .page-header {
+  background: #2b2b2b;
+  border-bottom: none;
+}
+
+.mv-page .page-title {
+  color: #ffffff;
+}
+
+.mv-page .page-subtitle {
+  color: #cccccc;
+}
+
+/* Sección mission/vision */
+
+.mv-hero {
+  position: relative;
+  padding: 2rem 0 3rem 0;
+}
+
+.mv-bg-image {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mv-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mv-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.mv-text-card {
+  background: rgba(16, 16, 16, 0.9);
+  border-radius: 14px;
+  padding: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.mv-text-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  font-size: 1.2rem;
+}
+
+.mv-text-card p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Valores */
+
+.mv-values {
+  padding: 2.5rem 0 3.5rem 0;
+  background: #202020;
+}
+
+.mv-values h2 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  font-size: 1.4rem;
+}
+
+.mv-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.2rem;
+}
+
+.mv-value-card {
+  background: #292929;
+  border-radius: 12px;
+  padding: 1.4rem 1.3rem;
+  border: 1px solid #353535;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+
+.mv-value-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.mv-value-card p {
+  font-size: 0.9rem;
+  color: #ddd;
+  line-height: 1.6;
+}
