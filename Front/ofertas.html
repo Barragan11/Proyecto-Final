@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astro Motors | Ofertas</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="header-inner container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/logo-astro-motors.png" alt="Astro Motors">
+      </a>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+
+        <li class="has-submenu">
+          <a href="productos.html">Productos</a>
+          <ul class="submenu">
+            <li><a href="productos-clasicos.html">Clásicos</a></li>
+            <li><a href="productos-deportivos.html">Deportivos</a></li>
+            <li><a href="productos-lujosos.html">Lujosos</a></li>
+          </ul>
+        </li>
+
+        <li><a href="ofertas.html">Ofertas</a></li>
+        <li><a href="mision-vision.html">Misión y Visión</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Iconos derecha -->
+    <div class="header-icons">
+      <span id="user-name" class="header-user-name"></span>
+
+      <a href="carrito.html" id="cart-link" class="icon-btn icon-cart" aria-label="Carrito" style="display:none;">
+        🛒 <span id="cart-count" class="cart-count-badge">0</span>
+      </a>
+
+      <a href="admin.html" id="admin-link" class="icon-btn" style="display:none;" aria-label="Panel administrador">
+        ⚙️
+      </a>
+
+      <a href="login.html" id="login-link" class="icon-btn icon-account" aria-label="Cuenta">
+        👤
+      </a>
+
+      <button id="logout-btn" class="icon-btn" style="display:none;" aria-label="Cerrar sesión">
+        Salir
+      </button>
+    </div>
+  </div>
+</header>
+
+  <main class="products-page offers-page">
+
+    <!-- Título EN OFERTA + barra gris como en la captura -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">EN OFERTA</h1>
+        <p class="page-subtitle">Productos destacados</p>
+      </div>
+      <div class="page-strip"></div>
+    </section>
+
+    <!-- Barra de filtros igual que en productos pero solo ofertas -->
+    <section class="products-toolbar-section">
+      <div class="container products-toolbar">
+        <div class="filters-left">
+          <div class="filter-group">
+            <span class="filter-label">Disponibilidad</span>
+            <select id="filter-availability-offers">
+              <option value="">Todos</option>
+              <option value="available">Disponible</option>
+              <option value="soldout">Agotado</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">Precio</span>
+            <select id="filter-price-offers">
+              <option value="">—</option>
+              <option value="asc">Menor a mayor</option>
+              <option value="desc">Mayor a menor</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="toolbar-right">
+          <span class="items-count" id="offers-count">0 artículos</span>
+
+          <div class="order-group">
+            <span class="filter-label">Ordenar</span>
+            <select id="order-by-offers">
+              <option value="default">Por defecto</option>
+              <option value="price-asc">Precio: menor a mayor</option>
+              <option value="price-desc">Precio: mayor a mayor</option>
+            </select>
+            <button class="view-btn active" aria-label="Vista de cuadrícula">▦</button>
+            <button class="view-btn" aria-label="Vista de lista">☰</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid solo de productos en oferta -->
+    <section class="products-section">
+      <div class="container">
+        <div class="products-grid products-grid-offers" id="offers-grid">
+          <!-- Aquí JS insertará solo productos con oferta = true -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER + Chat -->
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Astro Motors. Proyecto académico – Ingeniería en Sistemas Computacionales.</p>
+      <p><a href="#">Términos y políticas</a></p>
+    </div>
+  </footer>
+
+    <!-- Librería para alerts (permitida) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Módulos propios -->
+  <script src="funciones/api.js"></script>
+  <script src="funciones/auth.js"></script>
+  <script src="funciones/products.js"></script>
+</body>
+</html>
+
+</body>
+</html>

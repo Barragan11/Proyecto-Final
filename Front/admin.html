@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astro Motors | Panel Admin</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- mismo header que las demás páginas -->
+  <header class="main-header">
+    <div class="header-inner container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo-astro-motors.png" alt="Astro Motors">
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li class="has-submenu">
+            <a href="productos.html">Productos</a>
+            <ul class="submenu">
+              <li><a href="productos-clasicos.html">Clásicos</a></li>
+              <li><a href="productos-deportivos.html">Deportivos</a></li>
+              <li><a href="productos-lujosos.html">Lujosos</a></li>
+            </ul>
+          </li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="mision-vision.html">Misión y Visión</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons">
+        <span id="user-name" class="header-user-name"></span>
+
+        <a href="carrito.html" id="cart-link" class="icon-btn icon-cart" aria-label="Carrito" style="display:none;">
+          🛒 <span id="cart-count" class="cart-count-badge">0</span>
+        </a>
+
+        <a href="admin.html" id="admin-link" class="icon-btn" style="display:none;" aria-label="Panel administrador">
+          ⚙️
+        </a>
+
+        <a href="login.html" id="login-link" class="icon-btn icon-account" aria-label="Cuenta">
+          👤
+        </a>
+        <button id="logout-btn" class="icon-btn" style="display:none;" aria-label="Cerrar sesión">
+          Salir
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="products-page">
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">PANEL ADMINISTRADOR</h1>
+        <p class="page-subtitle">Gestión de Astro Motors</p>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <div class="container">
+
+        <!-- Tabs del panel -->
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" data-section="products">Productos</button>
+          <button class="admin-tab-btn" data-section="orders">Pedidos</button>
+          <button class="admin-tab-btn" data-section="users">Usuarios</button>
+          <!-- Nueva pestaña de estadísticas -->
+          <button class="admin-tab-btn" data-section="dashboard">Estadísticas</button>
+        </div>
+
+        <!-- Contenido del panel -->
+        <div class="admin-sections">
+
+          <!-- Sección Productos -->
+          <section id="admin-section-products" class="admin-section active">
+            <div class="cart-layout">
+              <!-- Alta de producto -->
+              <div class="cart-card">
+                <h2>Nuevo producto</h2>
+
+                <div class="admin-new-product">
+                  <div class="form-field">
+                    <label for="prod-name">Nombre</label>
+                    <input type="text" id="prod-name">
+                  </div>
+
+                  <div class="form-field">
+                    <label for="prod-desc">Descripción</label>
+                    <input type="text" id="prod-desc">
+                  </div>
+
+                  <div class="form-field">
+                    <label for="prod-price">Precio</label>
+                    <input type="number" id="prod-price" min="0" step="0.01">
+                  </div>
+
+                  <div class="form-field">
+                    <label for="prod-stock">Existencia</label>
+                    <input type="number" id="prod-stock" min="0" step="1">
+                  </div>
+
+                  <div class="form-field">
+                    <label for="prod-category">Categoría</label>
+                    <select id="prod-category">
+                      <option value="clasicos">Clásicos</option>
+                      <option value="deportivos">Deportivos</option>
+                      <option value="lujosos">Lujosos</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field form-field-wide">
+                    <label for="prod-image">URL de imagen</label>
+                    <input type="text" id="prod-image" placeholder="http://localhost:3000/images/auto.jpg">
+                  </div>
+
+                  <div class="form-field">
+                    <label>
+                      <input type="checkbox" id="prod-offer">
+                      Producto en oferta
+                    </label>
+                  </div>
+
+                  <div class="form-actions admin-new-product-actions">
+                    <button id="btn-create-product">Agregar producto</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Lista productos -->
+              <div class="cart-card">
+                <h2>Ajustes y edición de productos</h2>
+                <div id="admin-products-list">
+                  <p>Cargando productos...</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Sección Pedidos -->
+          <section id="admin-section-orders" class="admin-section">
+            <div class="cart-card">
+              <h2>Pedidos</h2>
+              <div id="admin-orders-list">
+                <p>Cargando pedidos...</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Sección Usuarios -->
+          <section id="admin-section-users" class="admin-section">
+            <div class="cart-card">
+              <h2>Usuarios</h2>
+              <div id="admin-users-list">
+                <p>Cargando usuarios...</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Sección Dashboard / Estadísticas -->
+          <section id="admin-section-dashboard" class="admin-section">
+          <div class="cart-card chart-card">
+            <h2>Ventas por categoría</h2>
+
+            <p id="sales-total-label" class="sales-total-label"></p>
+
+            <div class="admin-chart-container">
+              <canvas id="sales-by-category-chart"></canvas>
+            </div>
+
+            <div style="text-align:right; margin-top:0.5rem;">
+              <button id="btn-refresh-sales" class="btn-small primary">Actualizar</button>
+            </div>
+
+
+            <div class="cart-card" style="margin-top:1rem;">
+              <h2>Reporte de existencias</h2>
+              <div style="text-align:right; margin-bottom:0.5rem;">
+                <button id="btn-refresh-stock" class="btn-small primary">Actualizar</button>
+              </div>
+              <div id="stock-report-table">
+                <!-- Aquí se llenará dinámicamente la tabla de existencias -->
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Astro Motors. Proyecto académico – Ingeniería en Sistemas Computacionales.</p>
+      <p><a href="#">Términos y políticas</a></p>
+    </div>
+  </footer>
+
+  <!-- Chart.js para la gráfica del dashboard -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Librerías / funciones -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="funciones/api.js"></script>
+  <script src="funciones/auth.js"></script>
+  <script src="funciones/admin.js"></script>
+</body>
+</html>
